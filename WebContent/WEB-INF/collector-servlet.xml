@@ -10,7 +10,7 @@
    http://www.springframework.org/schema/mvc 
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-   <context:component-scan base-package="forum" />
+   <context:component-scan base-package="timestamps" />
    
    <!--mvc:resources mapping="/resources/**" location="WEB_INF/static"/-->
 
@@ -31,11 +31,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
  
- 	<bean id="themeDAOImpl" class="forum.dao.impl.StatisticsDAOImpl">
-		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
-	</bean>
-	
-	<bean id="postDAOImpl" class="forum.dao.impl.EntityDAOImpl">
+ 	<bean id="statisticsDAOImpl" class="timestamps.dao.impl.StatisticsDAOImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
 </beans>
