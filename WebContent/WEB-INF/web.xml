@@ -8,13 +8,13 @@
 
    <display-name>Spring MVC Application</display-name>
 
-   <!--servlet>
+   <servlet>
       <servlet-name>collector</servlet-name>
       <servlet-class>
          org.springframework.web.servlet.DispatcherServlet
       </servlet-class>
-      <load-on-startup>1</load-on-startup>
-   </servlet-->
+      <load-on-startup>2</load-on-startup>
+   </servlet>
    
    <servlet>
    	<servlet-name>info</servlet-name>
@@ -22,10 +22,10 @@
    	<load-on-startup>1</load-on-startup>
    </servlet>
 
-   <!--servlet-mapping>
+   <servlet-mapping>
       <servlet-name>collector</servlet-name>
       <url-pattern>/collect</url-pattern>
-   </servlet-mapping--> 
+   </servlet-mapping> 
    
    <servlet-mapping>
       <servlet-name>info</servlet-name>

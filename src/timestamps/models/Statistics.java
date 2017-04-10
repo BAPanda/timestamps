@@ -10,6 +10,18 @@ public class Statistics {
 	private double hDDSpace;
 	private double rAMLoad;
 	
+	public Statistics(){
+		
+	}
+	
+	public Statistics(BigInteger entityID, long timestamp, double temperature, double hDDSpace, double rAMLoad){
+		this.entityID = entityID;
+		this.timestamp = timestamp;
+		this.temperature = temperature;
+		this.hDDSpace = hDDSpace;
+		this.rAMLoad = rAMLoad;
+	}
+	
 	public BigInteger getEntityID() {
 		return entityID;
 	}
@@ -50,6 +62,9 @@ public class Statistics {
 		this.timestamp = timestamp;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return hDDSpace + ":" + rAMLoad + ":" + temperature + ":" + timestamp;
+	}
 
 }

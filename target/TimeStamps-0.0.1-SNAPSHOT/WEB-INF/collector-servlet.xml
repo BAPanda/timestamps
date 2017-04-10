@@ -32,6 +32,28 @@
 	</bean>
  
  	<bean id="statisticsDAOImpl" class="timestamps.dao.impl.StatisticsDAOImpl">
-		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="url" value="http://localhost:8086"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="root"></property>
+		<property name="dbName" value="myStats"></property>
 	</bean>
+	
+	<bean id="kafkaConfiguration" class="timestamps.kafkaintegration.KafkaConfiguration">
+		<property name="topic" value="statistics"></property>
+		<property name="brokerAddress" value="http://localhost:9092"></property>
+		<property name="zookeeperAddress" value="http://localhost:2181"></property>
+	</bean>
+	
+	<!--bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+		    <list>
+		        <value>
+		            classpath:kafkaconsumer.property
+		        </value>
+		        <value>
+		            classpath:kafkaproducer.property
+		        </value>
+		    </list>
+		</property>	
+	</bean-->
 </beans>
